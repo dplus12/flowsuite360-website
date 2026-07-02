@@ -1,0 +1,45 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  margin: 0;
+  background: #f8fafc;
+  color: #111827;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(79, 70, 229, 0.18);
+}
+
+.mesh-bg {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.22), transparent 28%),
+    radial-gradient(circle at 80% 5%, rgba(249, 115, 22, 0.16), transparent 24%),
+    linear-gradient(135deg, #f8fafc 0%, #ffffff 44%, #eef2ff 100%);
+}
