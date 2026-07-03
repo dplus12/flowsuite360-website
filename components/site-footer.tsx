@@ -21,7 +21,7 @@ export function SiteFooter() {
               alt="FlowSuite360"
               width={520}
               height={150}
-              className="h-20 w-auto max-w-[330px] object-contain"
+              className="h-12 w-auto max-w-[300px] object-contain sm:h-14"
             />
           </Link>
           <p className="mt-4 max-w-md leading-7 text-muted">

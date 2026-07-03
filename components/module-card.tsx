@@ -20,13 +20,13 @@ export function ModuleCard({ module }: { module: FlowModule }) {
     <article className="flex h-full flex-col rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
       <div className="flex items-start justify-between gap-4">
         {module.logoSrc ? (
-          <div className="flex h-16 w-28 items-center justify-center rounded-lg border border-slate-200 bg-white p-2">
+          <div className="flex h-24 min-w-0 flex-1 items-center justify-center rounded-lg border border-slate-200 bg-white p-4">
             <Image
               src={module.logoSrc}
               alt={`${module.name} logo`}
-              width={112}
-              height={64}
-              className="max-h-12 w-full object-contain"
+              width={220}
+              height={96}
+              className="max-h-20 w-full object-contain"
             />
           </div>
         ) : (

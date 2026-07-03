@@ -17,14 +17,14 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-xl">
-      <nav className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:min-h-24 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:min-h-20 sm:px-6 lg:px-8">
         <Link href="/" className="flex min-w-0 items-center gap-3" onClick={() => setIsOpen(false)}>
           <Image
             src="/branding/flowsuite360/logo.png"
             alt="FlowSuite360"
             width={520}
             height={150}
-            className="h-14 w-auto max-w-[220px] object-contain sm:h-16 sm:max-w-[300px] lg:h-20 lg:max-w-[360px]"
+            className="h-10 w-auto max-w-[210px] object-contain sm:h-12 sm:max-w-[280px] lg:h-14 lg:max-w-[340px]"
             priority
           />
         </Link>
