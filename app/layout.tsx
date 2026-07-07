@@ -1,8 +1,8 @@
 ﻿import type { Metadata } from "next";
 import "./globals.css";
+import { FaqAssistant } from "@/components/faq-assistant/faq-assistant";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { getWhatsAppHref } from "@/lib/contact";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.flowsuite360.com"),
@@ -39,14 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-sans">
         <SiteHeader />
         <main>{children}</main>
-        <a
-          href={getWhatsAppHref()}
-          className="fixed bottom-5 right-5 z-50 rounded-full bg-growth px-5 py-3 text-sm font-black text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-emerald-700"
-          target="_blank"
-          rel="noreferrer"
-        >
-          WhatsApp
-        </a>
+        <FaqAssistant />
         <SiteFooter />
       </body>
     </html>
