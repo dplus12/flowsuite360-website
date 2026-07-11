@@ -5,11 +5,11 @@ import { SectionHeading } from "./section-heading";
 
 const benefits = [
   "Configuration initiale accompagnée",
-  "Aide à l’import ou à la création des premiers articles",
-  "Formation de base de l’équipe",
+  "Aide à l'import ou à la création des premiers articles",
+  "Formation de base de l'équipe",
   "Support prioritaire pendant la période pilote",
-  "Retour terrain pris en compte dans l’amélioration du produit",
-  "Accès anticipé aux modules disponibles selon votre activité"
+  "Retour terrain pris en compte dans l'amélioration du produit",
+  "Accès aux solutions adaptées selon votre activité"
 ];
 
 const profiles = [
@@ -17,7 +17,7 @@ const profiles = [
   "Pharmacie",
   "Restaurant ou café",
   "Garage",
-  "Église ou organisation",
+  "Organisation",
   "Dépôt ou grossiste",
   "Quincaillerie",
   "PME avec employés",
@@ -25,9 +25,9 @@ const profiles = [
 ];
 
 const pricing = [
-  "Tarif pilote préférentiel selon votre région géographique",
-  "Offre pilote limitée, communiquée après qualification de votre activité",
-  "Démo gratuite avant engagement"
+  "Tarifs adaptés selon votre région et votre configuration",
+  "Offre pilote communiquée après qualification de votre activité",
+  "Démonstration possible avant engagement"
 ];
 
 export function PilotSection() {
@@ -35,9 +35,9 @@ export function PilotSection() {
     <section id="programme-pilote" className="scroll-mt-28 bg-surface py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Devenir entreprise pilote"
-          title="Devenir entreprise pilote FlowSuite360"
-          description="Nous sélectionnons actuellement des commerces, PME et organisations pour tester FlowSuite360 dans des conditions réelles avec un accompagnement personnalisé."
+          eyebrow="Programme pilote"
+          title="Un accompagnement renforcé pour bien démarrer"
+          description="FlowSuite360 est disponible pour des activités ciblées. Le programme pilote ajoute un accompagnement plus proche pour les entreprises qui veulent structurer leur démarrage."
         />
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
           <PilotList title="Avantages" items={benefits} />
@@ -46,7 +46,7 @@ export function PilotSection() {
         </div>
         <div className="mt-8 flex flex-wrap gap-3 rounded-lg border border-slate-200 bg-white p-6">
           <Link href="/demo" className="rounded-full bg-brand px-5 py-3 font-black text-white shadow-glow">
-            Devenir entreprise pilote
+            Découvrir le programme pilote
           </Link>
           <a
             href={getWhatsAppHref()}

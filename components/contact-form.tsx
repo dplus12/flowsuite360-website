@@ -38,7 +38,9 @@ export function ContactForm() {
         Envoyer
         <Send className="h-4 w-4" aria-hidden="true" />
       </button>
-      {submitted ? <p className="mt-4 font-semibold text-growth">Message reçu. Réponse sous 24-48h.</p> : null}
+      {submitted ? (
+        <p className="mt-4 font-semibold text-growth">Message reçu. L&apos;équipe vous répondra selon les informations fournies.</p>
+      ) : null}
     </form>
   );
 }

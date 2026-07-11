@@ -1,11 +1,11 @@
-﻿"use client";
+"use client";
 
 import { useMemo, useState } from "react";
 import { ModuleCard } from "@/components/module-card";
 import { SectionHeading } from "@/components/section-heading";
 import { modules } from "@/data/modules";
 
-const filters = ["Tous", "Disponible", "Bêta", "Bientôt", "Métier"];
+const filters = ["Tous", "Disponible", "Pilote", "Préparation", "Sur demande"];
 
 export default function ModulesPage() {
   const [filter, setFilter] = useState("Tous");
@@ -18,9 +18,9 @@ export default function ModulesPage() {
     <section className="scroll-mt-28 bg-surface py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Modules"
+          eyebrow="Solutions"
           title="Une suite prête à grandir avec votre entreprise."
-          description="Explorez les modules disponibles, en bêta ou en préparation pour les réalités du Canada et de l’Afrique francophone."
+          description="Certaines solutions sont disponibles immédiatement. D'autres sont activées progressivement dans le cadre du programme pilote ou de projets adaptés."
         />
         <div className="mt-8 flex flex-wrap gap-2">
           {filters.map((item) => (

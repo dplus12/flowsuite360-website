@@ -11,10 +11,12 @@ export function AuthForm({ mode }: { mode: "login" | "signup" }) {
             {isSignup ? "Inscription" : "Connexion"}
           </p>
           <h1 className="mt-3 text-3xl font-black text-midnight">
-            {isSignup ? "Créer un compte FlowSuite 360" : "Connexion à FlowSuite 360"}
+            {isSignup ? "Créer un compte FlowSuite360" : "Connexion à FlowSuite360"}
           </h1>
           <p className="mt-3 leading-7 text-muted">
-            Interface V1 préparée pour Supabase Auth. Redirection future : app.flowsuite360.com.
+            {isSignup
+              ? "Les inscriptions sont actuellement ouvertes aux clients accompagnés et aux entreprises pilotes."
+              : "Accédez à votre espace FlowSuite360 si votre compte a déjà été configuré."}
           </p>
           <form className="mt-6 grid gap-4">
             <label>
@@ -31,11 +33,8 @@ export function AuthForm({ mode }: { mode: "login" | "signup" }) {
                 className="mt-2 w-full rounded-lg border border-slate-200 px-4 py-3 outline-none focus:border-brand focus:ring-4 focus:ring-indigo-100"
               />
             </label>
-            <button
-              className="rounded-full bg-gradient-to-r from-brand to-growth px-5 py-3 font-bold text-white"
-              type="button"
-            >
-              {isSignup ? "Créer compte" : "Connexion"}
+            <button className="rounded-full bg-gradient-to-r from-brand to-growth px-5 py-3 font-bold text-white" type="button">
+              {isSignup ? "Créer un compte" : "Connexion"}
             </button>
           </form>
           <div className="mt-6 flex flex-wrap items-center justify-between gap-3 text-sm font-semibold">

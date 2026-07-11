@@ -10,10 +10,10 @@ type CTASectionProps = {
 };
 
 export function CTASection({
-  title = "Prêt à moderniser votre gestion ?",
+  title = "Prêt à simplifier votre gestion ?",
   description = "Parlez-nous de votre activité et nous vous aiderons à choisir le bon point de départ.",
   primaryHref = "/demo",
-  primaryLabel = "Demander une démo",
+  primaryLabel = "Demander une démonstration",
   secondaryHref = "/modules/smartpos",
   secondaryLabel = "Voir SmartPOS"
 }: CTASectionProps) {

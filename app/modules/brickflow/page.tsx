@@ -9,9 +9,9 @@ const features = [
   { title: "Recettes de briques", text: "Structurez vos formules et standards de production.", icon: Calculator },
   { title: "Coût réel de production", text: "Comprenez les coûts complets par lot, type et unité produite.", icon: WalletCards },
   { title: "Production journalière", text: "Enregistrez vos quantités, pertes, lots et produits finis.", icon: Factory },
-  { title: "Livraison", text: "Intégrez transport, frais, chauffeurs et suivi de livraison.", icon: Truck },
-  { title: "Main-d’œuvre", text: "Tenez compte des équipes, présences, coûts et tâches terrain.", icon: Users },
-  { title: "Carburant et machine", text: "Ajoutez les charges qui changent vraiment la rentabilité.", icon: Fuel }
+  { title: "Livraison", text: "Tenez compte du transport, des frais et du suivi de livraison.", icon: Truck },
+  { title: "Main-d'oeuvre", text: "Tenez compte des équipes, présences, coûts et tâches terrain.", icon: Users },
+  { title: "Carburant et machine", text: "Ajoutez les charges qui changent la rentabilité.", icon: Fuel }
 ];
 
 export default function BrickFlowPage() {
@@ -22,14 +22,14 @@ export default function BrickFlowPage() {
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-brand">BrickFlow</p>
             <h1 className="mt-4 text-4xl font-black leading-tight text-midnight sm:text-5xl">
-              BrickFlow — La gestion moderne pour briqueteries.
+              La gestion moderne pour briqueteries.
             </h1>
             <p className="mt-6 text-lg leading-8 text-muted">
-              Calculez vos coûts, suivez vos matières premières, organisez la production, vendez vos briques
-              et contrôlez votre rentabilité.
+              Calculez vos coûts, suivez vos matières premières, organisez la production, vendez vos briques et
+              contrôlez votre rentabilité avec un parcours adapté au terrain.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <GradientButton href="/demo">Demander une démo BrickFlow</GradientButton>
+              <GradientButton href="/demo">Demander une démonstration BrickFlow</GradientButton>
               <GradientButton href="/contact" variant="secondary">
                 Présenter ma briqueterie
               </GradientButton>
@@ -38,8 +38,8 @@ export default function BrickFlowPage() {
           <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-soft">
             <h2 className="text-xl font-black text-midnight">Coût réel, pas seulement théorique</h2>
             <p className="mt-4 leading-8 text-muted">
-              BrickFlow tient compte du ciment, sable, poudre de caillasse, main-d’œuvre, machine,
-              carburant, transport et livraison pour mieux comprendre le coût réel de chaque brique.
+              BrickFlow tient compte des intrants, de la main-d&apos;oeuvre, des machines, du carburant, du transport et de
+              la livraison pour mieux comprendre le coût réel de chaque brique.
             </p>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function BrickFlowPage() {
 
       <CTASection
         title="Votre briqueterie mérite des chiffres fiables."
-        primaryLabel="Demander une démo BrickFlow"
+        primaryLabel="Demander une démonstration BrickFlow"
         secondaryLabel="Présenter ma briqueterie"
         secondaryHref="/contact"
       />

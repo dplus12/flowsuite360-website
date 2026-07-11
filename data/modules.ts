@@ -1,4 +1,4 @@
-﻿import {
+import {
   Banknote,
   Boxes,
   BrickWall,
@@ -13,22 +13,13 @@
   Users
 } from "lucide-react";
 
-export type ModuleStatus =
-  | "Disponible"
-  | "Bêta avancée"
-  | "Inclus avec SmartPOS"
-  | "Bientôt disponible"
-  | "En préparation"
-  | "Bêta privée"
-  | "En développement"
-  | "Sur demande"
-  | "Disponible bientôt";
+export type ModuleStatus = "Disponible" | "Disponible en programme pilote" | "En préparation" | "Sur demande";
 
 export type FlowModule = {
   slug: string;
   name: string;
   status: ModuleStatus;
-  category: "Disponible" | "Bêta" | "Bientôt" | "Métier";
+  category: "Disponible" | "Pilote" | "Préparation" | "Sur demande";
   description: string;
   color: "brand" | "passion" | "growth" | "skyflow" | "midnight";
   icon: typeof CreditCard;
@@ -42,7 +33,7 @@ export const modules: FlowModule[] = [
     name: "SmartPOS",
     status: "Disponible",
     category: "Disponible",
-    description: "Vente, panier, paiement, caisse, crédit client, paiement partiel, reçus et historique des ventes.",
+    description: "Vente, panier, paiement cash, crédit client, paiement partiel, reçus et historique des ventes.",
     color: "brand",
     icon: CreditCard,
     logoSrc: "/branding/mvp/smartpos.png",
@@ -51,22 +42,22 @@ export const modules: FlowModule[] = [
   {
     slug: "gestion-caisse",
     name: "Gestion de caisse",
-    status: "Inclus avec SmartPOS",
+    status: "Disponible",
     category: "Disponible",
-    description: "Sessions de caisse, cash control, entrées/sorties, dépôts banque et rapports de fermeture.",
+    description: "Sessions de caisse, entrées et sorties, contrôle quotidien et rapports de fermeture.",
     color: "growth",
     icon: Banknote,
-    href: "/modules"
+    href: "/modules/smartpos"
   },
   {
     slug: "gestion-clients",
     name: "Gestion clients",
-    status: "Inclus avec SmartPOS",
+    status: "Disponible",
     category: "Disponible",
-    description: "Clients, crédit, dettes, paiements partiels, paiements clients et historique.",
+    description: "Clients, crédit, dettes, paiements partiels et historique.",
     color: "skyflow",
     icon: Users,
-    href: "/modules"
+    href: "/modules/smartpos"
   },
   {
     slug: "gestion-stock",
@@ -76,13 +67,13 @@ export const modules: FlowModule[] = [
     description: "Produits, catégories, stocks, seuils, alertes et mouvements.",
     color: "passion",
     icon: Boxes,
-    href: "/modules"
+    href: "/modules/smartpos"
   },
   {
     slug: "brickflow",
     name: "BrickFlow",
-    status: "Disponible",
-    category: "Disponible",
+    status: "Disponible en programme pilote",
+    category: "Pilote",
     description: "Gestion de briqueterie : matières premières, recettes, production, coûts, ventes et livraison.",
     color: "midnight",
     icon: BrickWall,
@@ -90,11 +81,11 @@ export const modules: FlowModule[] = [
     href: "/modules/brickflow"
   },
   {
-    slug: "restoflow",
+    slug: "restaurantflow",
     name: "RestaurantFlow",
-    status: "Disponible",
-    category: "Disponible",
-    description: "POS restaurant, menus, tables, recettes, ingrédients et fournisseurs.",
+    status: "En préparation",
+    category: "Préparation",
+    description: "Parcours restaurant autour de la caisse, menus, commandes et suivi quotidien.",
     color: "passion",
     icon: ChefHat,
     logoSrc: "/branding/mvp/restaurantflow.png",
@@ -105,17 +96,17 @@ export const modules: FlowModule[] = [
     name: "ShopFlow",
     status: "Disponible",
     category: "Disponible",
-    description: "Boutiques, dépôts, produits, inventaire, ventes et clients.",
+    description: "Boutiques, produits, inventaire, ventes et clients avec SmartPOS comme point de départ.",
     color: "brand",
     icon: ShoppingBag,
     logoSrc: "/branding/mvp/shopflow.png",
-    href: "/modules"
+    href: "/modules/smartpos"
   },
   {
     slug: "production",
     name: "Gestion de production",
-    status: "Bientôt disponible",
-    category: "Métier",
+    status: "En préparation",
+    category: "Préparation",
     description: "Recettes, matières premières, coûts de production et produits finis.",
     color: "growth",
     icon: Factory,
@@ -123,10 +114,10 @@ export const modules: FlowModule[] = [
   },
   {
     slug: "pharmaflow",
-    name: "PharmaFlow de base",
-    status: "Disponible",
-    category: "Disponible",
-    description: "Produits, stock, lots, expirations et ventes pour pharmacies.",
+    name: "PharmaFlow",
+    status: "En préparation",
+    category: "Préparation",
+    description: "Parcours pharmacie autour des produits, du stock, des lots, des expirations et des ventes.",
     color: "skyflow",
     icon: PackageCheck,
     logoSrc: "/branding/mvp/pharmaflow.png",
@@ -136,7 +127,7 @@ export const modules: FlowModule[] = [
     slug: "churchflow",
     name: "ChurchFlow",
     status: "En préparation",
-    category: "Métier",
+    category: "Préparation",
     description: "Membres, dons, activités, finances et organisation interne.",
     color: "midnight",
     icon: Users,
@@ -147,7 +138,7 @@ export const modules: FlowModule[] = [
     slug: "garageflow",
     name: "GarageFlow",
     status: "En préparation",
-    category: "Métier",
+    category: "Préparation",
     description: "Clients, véhicules, réparations, pièces, services et facturation.",
     color: "passion",
     icon: Truck,
@@ -157,30 +148,30 @@ export const modules: FlowModule[] = [
   {
     slug: "depotflow",
     name: "DepotFlow",
-    status: "Disponible",
-    category: "Disponible",
-    description: "Gestion de dépôt, gros, livraisons, produits, stock et mouvements.",
+    status: "Sur demande",
+    category: "Sur demande",
+    description: "Gestion de dépôt, ventes en gros, livraisons, produits, stock et mouvements.",
     color: "growth",
     icon: Boxes,
     logoSrc: "/branding/mvp/depotflow.png",
-    href: "/modules"
+    href: "/contact"
   },
   {
     slug: "quincaillerieflow",
     name: "QuincaillerieFlow",
-    status: "Disponible",
-    category: "Disponible",
+    status: "Sur demande",
+    category: "Sur demande",
     description: "Articles, rayons, stock, ventes et suivi client pour quincailleries.",
     color: "brand",
     icon: ShoppingBag,
     logoSrc: "/branding/mvp/quincaillerieflow.png",
-    href: "/modules"
+    href: "/contact"
   },
   {
     slug: "livraisons",
     name: "Gestion des livraisons",
-    status: "En développement",
-    category: "Bientôt",
+    status: "En préparation",
+    category: "Préparation",
     description: "Livraisons, frais, chauffeurs, suivi et coûts logistiques.",
     color: "skyflow",
     icon: Truck,
@@ -188,13 +179,13 @@ export const modules: FlowModule[] = [
   },
   {
     slug: "paie-equipe",
-    name: "Paie et équipe",
+    name: "HR & Paie",
     status: "Sur demande",
-    category: "Bientôt",
-    description: "Paie, employés, présence, retenues et rapports.",
+    category: "Sur demande",
+    description: "Employés, présence, paie et rapports selon le contexte de l'organisation.",
     color: "midnight",
     icon: ClipboardList,
-    href: "/modules"
+    href: "/contact"
   }
 ];
 
@@ -204,7 +195,7 @@ export const solutionCards = [
   { title: "Vendre", icon: ShoppingBag, text: "Créez des paniers clairs et encaissez sans friction." },
   { title: "Encaisser", icon: HandCoins, text: "Cash, paiements partiels et crédit client dans un même flux." },
   { title: "Contrôler la caisse", icon: Banknote, text: "Ouvrez, suivez et fermez vos sessions avec confiance." },
-  { title: "Gérer les clients", icon: Users, text: "Suivez les dettes, les paiements et l’historique client." },
+  { title: "Gérer les clients", icon: Users, text: "Suivez les dettes, les paiements et l'historique client." },
   { title: "Suivre le stock", icon: PackageCheck, text: "Gardez une vue nette sur les produits, seuils et mouvements." },
   { title: "Produire", icon: Factory, text: "Préparez vos recettes, coûts et productions terrain." },
   { title: "Analyser", icon: ClipboardList, text: "Comprenez vos ventes, votre caisse et vos résultats." }

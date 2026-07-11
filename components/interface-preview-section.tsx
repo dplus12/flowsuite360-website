@@ -2,42 +2,15 @@ import Image from "next/image";
 import { SectionHeading } from "./section-heading";
 
 const screenshots = [
-  {
-    title: "Smart Login — Connexion intelligente",
-    src: "/screenshots/smart-login.jpg"
-  },
-  {
-    title: "Smart Login — Choix utilisateur",
-    src: "/screenshots/smart-login-1.jpg"
-  },
-  {
-    title: "Démarrage assisté — Configuration guidée",
-    src: "/screenshots/demarrage-assiste.png"
-  },
-  {
-    title: "Démarrage assisté — Recommandations",
-    src: "/screenshots/demarrage-assiste-1.png"
-  },
-  {
-    title: "SmartPOS — Caisse",
-    src: "/screenshots/smartpos-caisse.jpg"
-  },
-  {
-    title: "Tableau de bord",
-    src: "/screenshots/tableau-de-bord.jpg"
-  },
-  {
-    title: "Produits et stock",
-    src: "/screenshots/produits-stock.jpg"
-  },
-  {
-    title: "Clients",
-    src: "/screenshots/clients.jpg"
-  },
-  {
-    title: "Rapports",
-    src: "/screenshots/rapports.jpg"
-  }
+  { title: "Smart Login - Connexion", src: "/screenshots/smart-login.jpg" },
+  { title: "Smart Login - Choix utilisateur", src: "/screenshots/smart-login-1.jpg" },
+  { title: "Démarrage assisté - Configuration guidée", src: "/screenshots/demarrage-assiste.png" },
+  { title: "Démarrage assisté - Recommandations", src: "/screenshots/demarrage-assiste-1.png" },
+  { title: "SmartPOS - Caisse", src: "/screenshots/smartpos-caisse.jpg" },
+  { title: "Tableau de bord", src: "/screenshots/tableau-de-bord.jpg" },
+  { title: "Produits et stock", src: "/screenshots/produits-stock.jpg" },
+  { title: "Clients", src: "/screenshots/clients.jpg" },
+  { title: "Rapports", src: "/screenshots/rapports.jpg" }
 ];
 
 export function InterfacePreviewSection() {
@@ -47,8 +20,8 @@ export function InterfacePreviewSection() {
         <SectionHeading
           align="center"
           eyebrow="Aperçus interface"
-          title="Découvrez l’interface FlowSuite360"
-          description="Une interface simple, claire et guidée pour aider les utilisateurs à démarrer rapidement, même sans grande expérience informatique."
+          title="Découvrez l'interface FlowSuite360"
+          description="Une interface simple, claire et guidée pour aider les utilisateurs à démarrer rapidement."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {screenshots.map((screenshot) => (

@@ -9,8 +9,8 @@ export default function ContactPage() {
         <div>
           <SectionHeading
             eyebrow="Contact"
-            title="Une question, un besoin métier ou une démo à organiser ?"
-            description="Écrivez-nous ou planifiez une démonstration. Réponse sous 24-48h."
+            title="Une question, un besoin métier ou une démonstration à organiser ?"
+            description="Écrivez-nous ou planifiez une démonstration. L'équipe vous répondra selon les informations fournies."
           />
           <div className="mt-8 grid gap-4">
             {[

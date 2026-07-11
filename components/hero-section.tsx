@@ -1,7 +1,7 @@
 import { AppMockup } from "./app-mockup";
 import { GradientButton } from "./gradient-button";
 
-const badges = ["SmartPOS", "Caisse", "Crédit client", "Inventaire", "Production", "Multi-devises"];
+const badges = ["SmartPOS", "Caisse", "Crédit client", "Inventaire", "Production", "Rapports"];
 
 export function HeroSection() {
   return (
@@ -16,19 +16,19 @@ export function HeroSection() {
             ))}
           </div>
           <h1 className="mt-8 max-w-4xl text-4xl font-black leading-tight text-midnight sm:text-6xl">
-            Gérez votre entreprise avec une suite simple, moderne et modulaire.
+            Gérez votre entreprise plus simplement, au même endroit.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">
-            FlowSuite360 vous aide à vendre, encaisser, suivre vos clients, contrôler votre caisse, gérer
-            votre stock et activer les modules métier adaptés à votre activité.
+            Ventes, stock, clients, employés, paiements et rapports dans une solution adaptée à votre activité.
+            Commencez avec l&apos;essentiel, puis ajoutez les fonctions dont votre entreprise a besoin.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <GradientButton href="/modules/smartpos">Essayer SmartPOS</GradientButton>
-            <GradientButton href="/demo" variant="secondary">
-              Demander une démo
-            </GradientButton>
+            <GradientButton href="/demo">Voir comment ça fonctionne</GradientButton>
             <GradientButton href="/modules" variant="secondary">
-              Voir les modules
+              Trouver la solution adaptée à mon activité
+            </GradientButton>
+            <GradientButton href="/plans" variant="secondary">
+              Voir les plans et prix
             </GradientButton>
           </div>
         </div>

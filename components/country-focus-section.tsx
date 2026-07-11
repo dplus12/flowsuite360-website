@@ -3,18 +3,11 @@ import { CheckCircle2 } from "lucide-react";
 const columns = [
   {
     title: "Canada",
-    items: ["sécurité", "données", "reçu", "taxes futures", "support en français", "abonnement clair"]
+    items: ["sécurité", "données", "reçu", "support en français", "abonnement clair", "accompagnement"]
   },
   {
-    title: "Afrique",
-    items: [
-      "cash",
-      "mobile money futur",
-      "crédit client",
-      "multi-devises",
-      "contrôle caisse",
-      "formation et support terrain"
-    ]
+    title: "Afrique francophone",
+    items: ["cash", "crédit client", "multi-devises selon configuration", "contrôle caisse", "formation", "support terrain"]
   }
 ];
 
